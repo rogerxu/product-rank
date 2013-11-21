@@ -19,7 +19,7 @@
     <!-- ============================================================== -->
 
     <name>${project.artifactId}</name>
-    <description>iLike Analytics Demo</description>
+    <description>Product Rank Demo</description>
 
 
     <!-- ============================================================== -->
@@ -299,7 +299,7 @@
                     <artifactId>maven-war-plugin</artifactId>
                     <configuration>
                         <warSourceDirectory>${web.src.dir}</warSourceDirectory>
-                        <!-- <warSourceExcludes>WEB-INF/lib/**,*backup*/**</warSourceExcludes> -->
+                        <warSourceExcludes>WEB-INF/lib/**,vendor/**/sample*/**,vendor/**/lib*/**,vendor/**/test*/**,vendor/**/tool*/**,vendor/**/util*/**</warSourceExcludes>
                     </configuration>
                 </plugin>
             </plugins>
