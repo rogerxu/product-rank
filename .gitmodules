@@ -1,0 +1,3 @@
+[submodule "src/main/webapp/vendor/LABjs"]
+	path = src/main/webapp/vendor/LABjs
+	url = https://github.com/getify/LABjs.git

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>{{'APP_TITLE' | translate}}</title>
-        <meta name="description" content="iLike analytics">
+        <meta name="description" content="{{'APP_DESCRIPTION' | translate}}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
@@ -36,7 +36,7 @@
             <div id="footer" ng-include="'templates/footer.html'"></div>
         </div>
 
-        <script src="vendor/labjs/LAB.src.js"></script>
+        <script src="vendor/LABjs/LAB.src.js"></script>
         <script>
             $LAB.setGlobalDefaults({
                 BasePath: "./"
