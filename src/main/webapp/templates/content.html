@@ -1,0 +1,18 @@
+<div ng-controller="contentCtrl">
+
+    <!-- Nav tabs -->
+    <ul id="tabs" class="nav nav-tabs">
+        <li><a href="#top_rank" data-toggle="tab">{{'TAB_TOP_RANK' | translate}}</a></li>
+        <li><a href="#brand" data-toggle="tab">{{'TAB_BRAND' | translate}}</a></li>
+        <li><a href="#store" data-toggle="tab">{{'TAB_STORE' | translate}}</a></li>
+        <li><a href="#user_graph" data-toggle="tab">{{'TAB_USER_GRAPH' | translate}}</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane fade in active" id="top_rank" ng-include="'templates/top_rank.html'"></div>
+        <div class="tab-pane fade" id="brand" ng-include="'templates/brand.html'">My Brand</div>
+        <div class="tab-pane fade" id="store" ng-include="'templates/store.html'">My Store</div>
+        <div class="tab-pane fade" id="user_graph" ng-include="'templates/user_graph.html'">User Graph</div>
+    </div>
+</div>

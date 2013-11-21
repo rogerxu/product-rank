@@ -1,0 +1,28 @@
+{
+    "results": [
+        {
+            "id": "1",
+            "name": "20ft Dry Const"
+        },
+        {
+            "id": "2",
+            "name": "20ft Reefer Const"
+        },
+        {
+            "id": "3",
+            "name": "20ft High Cube"
+        },
+        {
+            "id": "4",
+            "name": "40ft Dry Const"
+        },
+        {
+            "id": "5",
+            "name": "40ft Reefer Const"
+        },
+        {
+            "id": "6",
+            "name": "40ft High Cube"
+        }
+    ]
+}

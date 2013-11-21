@@ -1,0 +1,31 @@
+<div ng-controller="topRankCtrl">
+    <div class="btn-toolbar text-right" role="toolbar">
+        <span>{{'LAST_UPDATE_TIME' | translate}}: {{lastUpdateTime | date:'medium'}}</span>
+        <button type="button" class="btn btn-default btn-xs" ng-click="refresh()">
+            <span class="glyphicon glyphicon-refresh"></span>
+        </button>
+    </div>
+
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="product in products">
+            <div class="row">
+                <div class="col-md-1">{{product.id}}</div>
+                <div class="col-md-3">{{product.name}}</div>
+                <div class="col-md-2">Brand logo</div>
+                <div class="col-md-5">
+                    <div class="progress" style="display: inline-block; width: 90%; height: 1em; margin-bottom: 0;">
+                        <div class="progress-bar" role="progressbar" aria-valuenow="{{product.percentage}}" aria-valuemin="0" aria-valuemax="100" style="width: {{product.percentage}}%;">
+                            <span class="sr-only">{{product.percentage}}%</span>
+                        </div>
+                    </div>
+                    <span class="glyphicon glyphicon-heart"></span>
+                </div>
+                <div class="col-md-1 text-right">{{product.likeNum | number}}</div>
+            </div>
+        </li>
+    </ul>
+
+    <ul class="pager">
+        <li><a href="#">More</a></li>
+    </ul>
+</div>

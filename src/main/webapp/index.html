@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{{'APP_TITLE' | translate}}</title>
+        <meta name="description" content="iLike analytics">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+        <link rel="stylesheet" href="styles/normalize.css">
+        <link rel="stylesheet" href="webjars/bootstrap/3.0.0/css/bootstrap.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="webjars/modernizr/2.6.2/modernizr.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div id="wrap">
+            <!-- Fixed navbar -->
+            <div id="navbar" ng-include="'templates/navbar.html'"></div>
+
+            <!-- Begin page content -->
+            <div id="container" class="container" style="padding: 60px 15px 0 15px;">
+                <div class="row">
+                    <aside id="sidebar" class="col-md-3" ng-include="'templates/sidebar.html'"></aside>
+                    <section id="content" class="col-md-9" ng-include="'templates/content.html'"></section>
+                </div>
+            </div>
+
+            <!-- Fixed footer -->
+            <div id="footer" ng-include="'templates/footer.html'"></div>
+        </div>
+
+        <script src="vendor/labjs/LAB.src.js"></script>
+        <script>
+            $LAB.setGlobalDefaults({
+                BasePath: "./"
+            })
+            .script([
+                'scripts/console.js',
+                'webjars/angularjs/1.2.0-rc.3/angular.js',
+                'webjars/underscorejs/1.5.2/underscore.js',
+                'webjars/jquery/2.0.3/jquery.js'
+            ]).wait()
+            .script([
+                'webjars/bootstrap/3.0.0/js/bootstrap.js',
+                'webjars/angular-translate/1.0.1/angular-translate.js',
+                'webjars/select2/3.4.4/select2.js'
+            ]).wait()
+            .script('scripts/main.js').wait()
+            .script('scripts/app.js').wait()
+            .script('scripts/config.js').wait()
+            .script([
+                'scripts/controllers/sidebarCtrl.js',
+                'scripts/controllers/contentCtrl.js',
+                'scripts/controllers/topRankCtrl.js',
+                'scripts/controllers/brandCtrl.js'
+            ])
+            .script([
+                //'scripts/directives/directives.js'
+            ])
+            .script([
+                'scripts/services/dataStorage.js',
+                'scripts/services/channel.js',
+                //'scripts/services/mapConfig.js',
+                //'scripts/services/mapManager.js',
+                'scripts/services/dataService.js'
+            ])
+            .script([
+                //'scripts/filters/filters.js'
+            ]).wait(function() {
+                angular.bootstrap(document, ['app']);
+            });
+        </script>
+    </body>
+</html>

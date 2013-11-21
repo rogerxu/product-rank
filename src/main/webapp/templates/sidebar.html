@@ -1,0 +1,34 @@
+<div ng-controller="sidebarCtrl">
+    <section class="well">
+        <form id="searchForm" class="form-inline" role="form" method="GET" action="https://www.google.com/search">
+            <div class="form-group">
+                <label class="sr-only" for="searchKeyword">Search</label>
+                <input type="text" class="form-control" id="searchKeyword" name="q" placeholder="Enter keyword">
+            </div>
+            <button type="submit" class="btn btn-default">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+        </form>
+    </section>
+
+    <section class="well">
+        <h5>{{'SIDEBAR_REGION' | translate}}</h5>
+        <select id="regionSelector" class="form-control">
+            <option ng-repeat="region in regions" value="{{region.id}}">{{region.name}}</option>
+        </select>
+    </section>
+
+    <section id="categorySection" class="well">
+        <h5>{{'SIDEBAR_CATEGORY' | translate}}</h5>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" /> {{'COMMON_SELECT_ALL' | translate}}
+            </label>
+        </div>
+        <div class="checkbox" ng-repeat="category in categories">
+            <label>
+                <input type="checkbox" ng-model="category.selected" /> {{category.id | translate}}
+            </label>
+        </div>
+    </section>
+</div>

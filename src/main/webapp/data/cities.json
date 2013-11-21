@@ -1,0 +1,16 @@
+{
+    "results": [
+        {
+            "id": "1",
+            "name": "Beijing"
+        },
+        {
+            "id": "2",
+            "name": "Shanghai"
+        },
+        {
+            "id": "3",
+            "name": "Chengdu"
+        }
+    ]
+}
