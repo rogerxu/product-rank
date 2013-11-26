@@ -36,8 +36,8 @@
 
         <servlet.version>3.0.1</servlet.version>
         <junit.version>4.11</junit.version>
-        <jetty.version>9.1.0.M0</jetty.version>
-        <jetty8.version>8.1.13.v20130916</jetty8.version>
+        <jetty.version>9.1.0.v20131115</jetty.version>
+        <jetty8.version>8.1.14.v20131031</jetty8.version>
         <jetty.port>8080</jetty.port>
     </properties>
 

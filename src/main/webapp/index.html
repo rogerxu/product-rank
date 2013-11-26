@@ -38,15 +38,21 @@
 
         <script src="vendor/LABjs/LAB.src.js"></script>
         <script>
-            $LAB.setGlobalDefaults({
-                BasePath: "./"
+            $LAB.setOptions({
+                'BasePath': '',
+                'Debug': true
             })
+            .script('scripts/console.js')
             .script([
-                'scripts/console.js',
                 'webjars/angularjs/1.2.0-rc.3/angular.js',
                 'webjars/underscorejs/1.5.2/underscore.js',
                 'webjars/jquery/2.0.3/jquery.js'
             ]).wait()
+            .script(function() {
+                var locale = (navigator.language).toLowerCase();
+                var url = 'webjars/angularjs/1.2.0-rc.3/i18n/angular-locale_' + locale + '.js';
+                return url;
+            })
             .script([
                 'webjars/bootstrap/3.0.0/js/bootstrap.js',
                 'webjars/angular-translate/1.0.1/angular-translate.js',
