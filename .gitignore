@@ -6,13 +6,13 @@
 *.war
 *.ear
 
+# Maven
+target/
+
 # Eclipse Project Files
 .settings
 .project
 .classpath
-
-# Maven
-target/
 
 # Log, Backup, Executable Files
 Thumbs.db
