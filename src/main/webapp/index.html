@@ -70,13 +70,10 @@
             .script('scripts/app.js').wait()
             .script('scripts/config.js').wait()
             .script([
-                'scripts/controllers/sidebarCtrl.js',
-                'scripts/controllers/contentCtrl.js',
-                'scripts/controllers/topRankCtrl.js',
-                'scripts/controllers/brandCtrl.js'
+                //'scripts/directives/directives.js'
             ])
             .script([
-                //'scripts/directives/directives.js'
+                //'scripts/filters/filters.js'
             ])
             .script([
                 'scripts/services/channel.js',
@@ -86,7 +83,10 @@
                 'scripts/services/dataService.js'
             ])
             .script([
-                //'scripts/filters/filters.js'
+                'scripts/controllers/sidebarCtrl.js',
+                'scripts/controllers/contentCtrl.js',
+                'scripts/controllers/topRankCtrl.js',
+                'scripts/controllers/brandCtrl.js'
             ]).wait(function() {
                 angular.bootstrap(document, ['app']);
             });
